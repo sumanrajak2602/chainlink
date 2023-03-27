@@ -101,7 +101,7 @@ abstract contract ChainlinkClient {
       SENDER_OVERRIDE, // Sender value - overridden by onTokenTransfer by the requesting contract's address
       AMOUNT_OVERRIDE, // Amount value - overridden by onTokenTransfer by the actual amount of LINK sent
       req.id,
-      address(this),
+      req.callbackAddress,
       req.callbackFunctionId,
       nonce,
       ORACLE_ARGS_VERSION,
